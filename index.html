@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bad Signal — IPTV player for Android TV</title>
+<meta name="description" content="Bad Signal is a fast, clean IPTV player for Android TV, Google TV and phones. Bring your own M3U or Xtream playlist. No accounts. No tracking.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='68' font-size='48' text-anchor='middle' fill='%2300F0FF' font-family='monospace' font-weight='bold'>BS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0D0D0D;
+    --surface: #16161f;
+    --cyan: #00F0FF;
+    --red: #E94560;
+    --text: #E0E0E0;
+    --dim: #808080;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .pixel { font-family: 'Silkscreen', monospace; font-weight: 700; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header {
+    padding: 96px 0 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .monogram {
+    font-size: clamp(64px, 14vw, 120px);
+    color: var(--cyan);
+    letter-spacing: 0.02em;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    text-shadow: 0 0 32px rgba(0, 240, 255, 0.35);
+  }
+  .monogram::after {
+    content: "";
+    position: absolute;
+    left: -12%;
+    right: -12%;
+    top: 54%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff 20%, #fff 55%, var(--cyan) 80%, transparent);
+    opacity: 0.9;
+  }
+  .wordmark {
+    font-size: clamp(22px, 5vw, 36px);
+    letter-spacing: 0.28em;
+    margin-top: 28px;
+    color: #fff;
+  }
+  .wordmark .bad { color: var(--red); }
+  .tagline {
+    color: var(--dim);
+    margin-top: 16px;
+    font-size: 17px;
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 14px 32px;
+    border: 1px solid rgba(0, 240, 255, 0.5);
+    border-radius: 8px;
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    cursor: default;
+  }
+
+  /* Scan-line divider */
+  .scan {
+    height: 3px;
+    max-width: 880px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, rgba(0,240,255,0.6) 30%, rgba(0,240,255,0.6) 70%, transparent);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+  }
+
+  /* Features */
+  section { padding: 72px 0; }
+  h2.pixel {
+    font-size: 20px;
+    color: var(--cyan);
+    letter-spacing: 0.15em;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+  .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .card p { font-size: 14px; color: var(--dim); }
+
+  /* Footer */
+  footer {
+    padding: 48px 0 64px;
+    text-align: center;
+    color: var(--dim);
+    font-size: 13px;
+  }
+  footer a { color: var(--cyan); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .disclaimer {
+    max-width: 620px;
+    margin: 20px auto 0;
+    font-size: 12px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="monogram pixel">BS</div>
+  <div class="wordmark pixel"><span class="bad">BAD</span> SIGNAL</div>
+  <p class="tagline">Your playlists. Your TV. Nothing else.</p>
+  <span class="cta">Coming soon to Google Play</span>
+</header>
+
+<div class="scan"></div>
+
+<section>
+  <div class="wrap">
+    <h2 class="pixel">BUILT FOR THE BIG SCREEN</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Bring your own playlist</h3>
+        <p>Add your M3U or Xtream Codes source in seconds. Bad Signal ships with no content — your subscription, your channels.</p>
+      </div>
+      <div class="card">
+        <h3>Fast on any box</h3>
+        <p>20,000+ channel playlists scroll and zap smoothly, even on modest TV hardware. Instant channel switching with deep background buffering.</p>
+      </div>
+      <div class="card">
+        <h3>TV guide built in</h3>
+        <p>EPG auto-discovery from your source, now &amp; next in the player, and a full programme guide.</p>
+      </div>
+      <div class="card">
+        <h3>Your local media too</h3>
+        <p>Play files from USB, device storage, or your NAS over SMB — with resume, subtitles, and seek that just works.</p>
+      </div>
+      <div class="card">
+        <h3>Made for the remote</h3>
+        <p>Designed for the 10-foot experience on Android TV and Google TV — and it runs great on your phone as well.</p>
+      </div>
+      <div class="card">
+        <h3>No accounts. No tracking.</h3>
+        <p>No sign-up, no analytics, no ads. Your playlists stay on your device. <a href="/privacy" style="color:var(--cyan);text-decoration:none">Read the privacy policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="scan"></div>
+
+<footer>
+  <p><a href="/privacy">Privacy Policy</a> · <a href="mailto:hello@badsignal.app">hello@badsignal.app</a></p>
+  <p style="margin-top:8px">© 2026 Bad Signal</p>
+  <p class="disclaimer">Bad Signal is a media player. It does not provide, host, or distribute any channels, streams, or other content. Users supply their own playlists and are responsible for the content they access.</p>
+</footer>
+
+</body>
+</html>
