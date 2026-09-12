@@ -1,0 +1,31 @@
+#EXTM3U url-tvg="https://badsignal.app/demo/epg.xml"
+#EXTINF:-1 tvg-id="nova1.demo" group-title="Demo TV" tvg-name="Nova One HD",Nova One HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+#EXTINF:-1 tvg-id="nova2.demo" group-title="Demo TV" tvg-name="Nova Two HD",Nova Two HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+#EXTINF:-1 tvg-id="pulse.demo" group-title="Demo Sport" tvg-name="Pulse Sports 1",Pulse Sports 1 HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4
+#EXTINF:-1 tvg-id="pulse2.demo" group-title="Demo Sport" tvg-name="Pulse Sports 2",Pulse Sports 2 HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4
+#EXTINF:-1 tvg-id="arena.demo" group-title="Demo Sport" tvg-name="Arena Football",Arena Football HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4
+#EXTINF:-1 tvg-id="orbit.demo" group-title="Demo News" tvg-name="Orbit News 24",Orbit News 24
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4
+#EXTINF:-1 tvg-id="daily.demo" group-title="Demo News" tvg-name="The Daily Channel",The Daily News Channel
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4
+#EXTINF:-1 tvg-id="cinema1.demo" group-title="Demo Movies" tvg-name="Cinema One",Cinema One Movies
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4
+#EXTINF:-1 tvg-id="cinema2.demo" group-title="Demo Movies" tvg-name="Cinema Classics",Cinema Classics Movies
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4
+#EXTINF:-1 tvg-id="reel.demo" group-title="Demo Movies" tvg-name="Reel Film HD",Reel Film HD
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4
+#EXTINF:-1 tvg-id="minis.demo" group-title="Demo Kids" tvg-name="Minis Kids TV",Minis Kids TV
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4
+#EXTINF:-1 tvg-id="cosmos.demo" group-title="Demo Docs" tvg-name="Cosmos Docs",Cosmos Documentaries
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4
+#EXTINF:-1 tvg-id="terra.demo" group-title="Demo Docs" tvg-name="Terra Nature",Terra Nature Docs
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4
+#EXTINF:-1 tvg-id="beat.demo" group-title="Demo Music" tvg-name="Beat Music TV",Beat Music TV
+https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4
+#EXTINF:-1 tvg-id="wave.demo" group-title="Demo TV" tvg-name="Wave Channel",Wave Channel HD
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
