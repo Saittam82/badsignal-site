@@ -30,6 +30,12 @@ Pages deploys automatically.
   `@badsignal.app` (the public one is `hello@`) forwards to the owner's
   personal Gmail. Config lives in the Cloudflare dashboard under
   Email Routing for the zone.
+- **Analytics:** Google Analytics 4 (GA4).
+  - **Measurement ID:** `G-HTMETQDNWL` (Stream ID: `16053543639`, `Bad Signal Webb`).
+  - **Tracking scope:** Web only (`index.html` and `privacy/index.html`). The Android TV app itself has zero analytics/telemetry.
+  - **Custom events:**
+    - `download_apk`: Clicks on the primary `↓ DOWNLOAD APK` button.
+    - `click_coffee`: Clicks on the `☕ BUY ME A BAD COFFEE` button.
 
 ## Gotchas
 
@@ -41,3 +47,5 @@ Pages deploys automatically.
 - Keep the content-responsibility disclaimer (footer + privacy policy): the
   app ships no content, users bring their own playlists. It matters for Play
   review.
+- Google Analytics Measurement ID is `G-HTMETQDNWL` — if updated, keep `index.html`,
+  `privacy/index.html`, and this README in sync.
