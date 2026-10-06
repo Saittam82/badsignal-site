@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTMETQDNWL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HTMETQDNWL');
+</script>
 <title>Bad Signal — IPTV player for Android TV</title>
 <meta name="description" content="Bad Signal is a fast, clean IPTV player for Android TV, Google TV and phones. Bring your own M3U playlist or Xtream Codes login. EPG guide, local & NAS playback. No accounts. No tracking.">
 <meta property="og:type" content="website">
@@ -204,8 +213,8 @@
   <h1 class="wordmark pixel"><span class="bad">BAD</span> SIGNAL</h1>
   <p class="tagline">The media player for Android TV &amp; Google TV.<br>Your M3U playlists. Your TV. Nothing else.</p>
   <div class="hero-actions">
-    <a href="badsignal-latest.apk" download class="btn btn-primary">↓ DOWNLOAD APK</a>
-    <a href="https://buymeacoffee.com/badsignal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+    <a href="badsignal-latest.apk" download class="btn btn-primary" onclick="gtag('event', 'download_apk', {'event_category': 'downloads', 'event_label': 'badsignal-latest.apk'});">↓ DOWNLOAD APK</a>
+    <a href="https://buymeacoffee.com/badsignal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="gtag('event', 'click_coffee', {'event_category': 'support', 'event_label': 'buy_me_a_coffee'});">
       <svg class="pixel-cup" viewBox="0 0 12 10" width="14" height="12" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true">
         <path d="M3 0h1v1H3z M7 0h1v1H7z M4 1h1v1H4z M8 1h1v1H8z M1 3h8v4H1z M10 4h1v2h-1z M2 7h6v1H2z M1 8h10v1H1z"/>
       </svg>
