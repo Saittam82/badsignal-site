@@ -76,18 +76,64 @@
     margin-top: 16px;
     font-size: 17px;
   }
-  .cta {
-    display: inline-block;
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
     margin-top: 36px;
-    padding: 14px 32px;
-    border: 1px solid rgba(0, 240, 255, 0.5);
-    border-radius: 8px;
-    color: var(--cyan);
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.04em;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
-    cursor: default;
+    border-radius: 0;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+  }
+  .btn-primary:hover {
+    background: #000;
+    color: #fff;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+  }
+  .btn-secondary:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+  .play-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    text-transform: uppercase;
+  }
+  @media (max-width: 580px) {
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   /* Scan-line divider */
@@ -150,7 +196,11 @@
   <div class="monogram pixel" aria-hidden="true">BS</div>
   <h1 class="wordmark pixel"><span class="bad">BAD</span> SIGNAL</h1>
   <p class="tagline">The media player for Android TV &amp; Google TV.<br>Your M3U playlists. Your TV. Nothing else.</p>
-  <span class="cta">Coming soon to Google Play</span>
+  <div class="hero-actions">
+    <a href="badsignal-latest.apk" download class="btn btn-primary">↓ DOWNLOAD APK</a>
+    <a href="https://buymeacoffee.com/badsignal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">☕ BUY ME A BAD COFFEE</a>
+  </div>
+  <p class="play-note">Coming soon to Google Play</p>
 </header>
 
 <div class="scan"></div>
