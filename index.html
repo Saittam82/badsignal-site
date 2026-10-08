@@ -449,8 +449,8 @@
 
       <div class="screen-viewport">
         <picture>
-          <source id="screen-source-webp" srcset="badsignal-screenshots/tv/3-guide.webp" type="image/webp">
-          <img id="screen-img" src="badsignal-screenshots/tv/3-guide.png" alt="Bad Signal TV Guide and EPG interface on Android TV" width="1920" height="1080">
+          <source id="screen-source-webp" srcset="badsignal-screenshots/tv/3-guide.webp?v=2" type="image/webp">
+          <img id="screen-img" src="badsignal-screenshots/tv/3-guide.png?v=2" alt="Bad Signal TV Guide and EPG interface on Android TV" width="1920" height="1080">
         </picture>
       </div>
 
@@ -532,8 +532,8 @@
     if (img && labelEl && descEl) {
       img.style.opacity = '0.35';
       setTimeout(function() {
-        if (webpSource) webpSource.srcset = 'badsignal-screenshots/tv/' + id + '.webp';
-        img.src = 'badsignal-screenshots/tv/' + id + '.png';
+        if (webpSource) webpSource.srcset = 'badsignal-screenshots/tv/' + id + '.webp?v=2';
+        img.src = 'badsignal-screenshots/tv/' + id + '.png?v=2';
         labelEl.innerHTML = label;
         descEl.innerHTML = desc;
         img.style.opacity = '1';
