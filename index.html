@@ -235,6 +235,137 @@
     box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
   }
 
+  /* Showcase Section */
+  .showcase { padding: 64px 0 48px; }
+  .showcase-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .tag-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .screen-monitor {
+    background: #000;
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    box-shadow: 0 0 32px rgba(0, 240, 255, 0.08);
+    overflow: hidden;
+  }
+  .screen-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #111118;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .screen-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .rec-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    display: inline-block;
+    animation: blink 2s infinite ease-in-out;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .screen-label {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .screen-meta {
+    color: var(--dim);
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  .screen-viewport {
+    position: relative;
+    width: 100%;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .screen-viewport img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.12s ease-in-out;
+  }
+  .screen-caption {
+    padding: 12px 16px;
+    background: #0d0d12;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .screen-caption .desc {
+    color: #b0b0b0;
+  }
+
+  /* Selector Tabs */
+  .screen-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .tab-btn {
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--dim);
+    padding: 12px 10px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    border-radius: 0;
+  }
+  .tab-btn .tab-idx {
+    color: var(--cyan);
+    font-size: 10px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .tab-btn:hover {
+    border-color: rgba(0, 240, 255, 0.4);
+    color: #fff;
+  }
+  .tab-btn.active {
+    background: #181b24;
+    border-color: var(--cyan);
+    color: #fff;
+    box-shadow: inset 0 2px 0 var(--cyan);
+  }
+  @media (max-width: 640px) {
+    .screen-tabs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .screen-bar .screen-meta {
+      display: none;
+    }
+  }
+
   /* Features */
   section { padding: 72px 0; }
   h2.pixel {
@@ -300,6 +431,57 @@
 
 <div class="scan"></div>
 
+<section class="showcase">
+  <div class="wrap">
+    <div class="showcase-header">
+      <span class="tag-mono pixel">// 10-FOOT INTERFACE</span>
+      <h2 class="pixel">SYSTEM IN ACTION</h2>
+    </div>
+
+    <div class="screen-monitor">
+      <div class="screen-bar">
+        <div class="screen-bar-left">
+          <span class="rec-dot" aria-hidden="true"></span>
+          <span class="screen-label" id="screen-label">01 // ELECTRONIC PROGRAMME GUIDE</span>
+        </div>
+        <span class="screen-meta">1080P · D-PAD NAV</span>
+      </div>
+
+      <div class="screen-viewport">
+        <picture>
+          <source id="screen-source-webp" srcset="badsignal-screenshots/tv/3-guide.webp" type="image/webp">
+          <img id="screen-img" src="badsignal-screenshots/tv/3-guide.png" alt="Bad Signal TV Guide and EPG interface on Android TV" width="1920" height="1080">
+        </picture>
+      </div>
+
+      <div class="screen-caption">
+        <span class="desc" id="screen-desc">Instant timeline EPG auto-discovered from your source. Now &amp; next preview directly on screen.</span>
+      </div>
+    </div>
+
+    <div class="screen-tabs" role="tablist" aria-label="Screenshot selector">
+      <button class="tab-btn active" role="tab" aria-selected="true" onclick="setScreen('3-guide', '01 // ELECTRONIC PROGRAMME GUIDE', 'Instant timeline EPG auto-discovered from your source. Now &amp; next preview directly on screen.', this)">
+        <span class="tab-idx">01</span>
+        <span>TV GUIDE / EPG</span>
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="setScreen('1-player', '02 // VIDEO PLAYER &amp; OSD', 'Stripped-down playback interface. Deep background buffering, quick track switching, and subtitle control.', this)">
+        <span class="tab-idx">02</span>
+        <span>PLAYER &amp; OSD</span>
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="setScreen('4-channel-list', '03 // CHANNEL MATRIX', 'Group and channel browsing designed for rapid remote zapping without leaving the screen.', this)">
+        <span class="tab-idx">03</span>
+        <span>CHANNEL LIST</span>
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="setScreen('2-home', '04 // SOURCE HUB', 'Fast setup for M3U, Xtream Codes, local device storage, and SMB/NAS network shares.', this)">
+        <span class="tab-idx">04</span>
+        <span>SOURCE HUB</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="scan"></div>
+
 <section>
   <div class="wrap">
     <h2 class="pixel">BUILT FOR THE BIG SCREEN</h2>
@@ -339,6 +521,36 @@
   <p style="margin-top:8px">© 2026 Bad Signal</p>
   <p class="disclaimer">Bad Signal is a media player. It does not provide, host, or distribute channels, streams, or other content. You bring your own sources. You are responsible for what you access.</p>
 </footer>
+
+<script>
+  function setScreen(id, label, desc, btn) {
+    var img = document.getElementById('screen-img');
+    var webpSource = document.getElementById('screen-source-webp');
+    var labelEl = document.getElementById('screen-label');
+    var descEl = document.getElementById('screen-desc');
+
+    if (img && labelEl && descEl) {
+      img.style.opacity = '0.35';
+      setTimeout(function() {
+        if (webpSource) webpSource.srcset = 'badsignal-screenshots/tv/' + id + '.webp';
+        img.src = 'badsignal-screenshots/tv/' + id + '.png';
+        labelEl.innerHTML = label;
+        descEl.innerHTML = desc;
+        img.style.opacity = '1';
+      }, 70);
+    }
+
+    var tabs = document.querySelectorAll('.tab-btn');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('active');
+      tabs[i].setAttribute('aria-selected', 'false');
+    }
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+    }
+  }
+</script>
 
 </body>
 </html>
